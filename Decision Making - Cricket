@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    // input
+    int ball = sc.nextInt(); // total number of balls
+    int run = sc.nextInt(); //total number of runs
+    int runsc = sc.nextInt(); // number of runs scored
+    int ballbo = sc.nextInt(); //number of balls bowled
+    // output
+    float over = ball / 6; //total number of overs
+    int overf = ballbo / 6; //total number of overs finished
+    int f1 = ballbo % 6;
+    float f2 = overf + (float)f1 * 1 / 10;
+    float curra = runsc / f2; //current run rate
+    float totra = run / over; //total run rate
+    System.out.println((int)over);
+    System.out.println(f2);
+    System.out.printf("%.1f\n" ,curra);
+    System.out.printf("%.1f\n" ,totra);
+    if(curra >= totra)
+        System.out.println("Eligible to Win");
+    else
+        System.out.println("Not Eligible to Win");
+}
+}
