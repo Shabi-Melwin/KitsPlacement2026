@@ -1,0 +1,12 @@
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int row = sc.nextInt();
+    int col = sc.nextInt();
+    int pos = sc.nextInt();
+    if((pos<=col || pos%col==1 || pos%col==0) && (pos<=row || pos%row==0 || pos%row==1)){
+        System.out.println("Yes");
+    }
+    else{
+        System.out.println("No");
+    }
+}
